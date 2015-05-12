@@ -1,3 +1,27 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="icon-bar three-up">
+	<a class="item">
+		<i class="fi-home"></i>
+		<label>Home</label>
+	</a>
+	<a class="item">
+		<i class="fi-trophy"></i>
+		<label>Play</label>
+	</a>
+	{{#if session.isAuthenticated}}
+		<a {{action 'invalidateSession'}} class="item">
+			<i class="fi-power"></i>
+			<label>Logout</label>
+		</a>
+		
+	{{else}}
+		<a {{action 'authenticate'}} class="item">
+			<i class="fi-torso"></i>
+			<label>Login</label>
+		</a>
+	{{/if}}
+</div>
+{{#if session.isAuthenticated}}
+	<img src={{imgurl}}>Bienvenue {{username}}
+{{/if}}
 
 {{outlet}}

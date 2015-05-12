@@ -1,9 +1,12 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var Funnel = require('broccoli-funnel');
 
 var app = new EmberApp();
-
+app.import('bower_components/foundation-icon-fonts/foundation-icons.woff', {
+	destDir: 'assets'
+});
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

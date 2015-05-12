@@ -2,6 +2,16 @@
 
 module.exports = function(environment) {
   var ENV = {
+		torii: {
+			providers: {
+				'facebook-connect':{
+					appId: '1446116239034233'
+				},
+				'facebook-oauth2':{
+					apiKey: '1446116239034233'
+				}
+			}
+		},
     modulePrefix: 'client',
     environment: environment,
     baseURL: '/',
@@ -16,7 +26,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
   };
 
   if (environment === 'development') {
@@ -42,6 +52,5 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
-
-  return ENV;
+	return ENV;
 };

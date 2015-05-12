@@ -1,0 +1,32 @@
+<form {{action 'register' on='submit'}}>
+	<div class="row">
+		<div class="small-12 columns">
+			<label>Nom d'utilisateur
+				{{input value=identification}}
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<label>Mot de passe
+				{{input value=password}}
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<label>Confirmation
+				{{input value=passwordConfirmation}}
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-centered small-12 columns">
+			<button type=submit>Valider</button>
+		</div>
+	</div>
+	
+</form>
+
+
+
