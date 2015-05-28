@@ -1,27 +1,52 @@
+<style>
+	.icon-bar{border-bottom: 2px solid black }
+</style>
+
+
+
 <div class="icon-bar three-up">
-	<a class="item">
-		<i class="fi-home"></i>
-		<label>Home</label>
-	</a>
-	<a class="item">
-		<i class="fi-trophy"></i>
-		<label>Play</label>
-	</a>
-	{{#if session.isAuthenticated}}
-		<a {{action 'invalidateSession'}} class="item">
-			<i class="fi-power"></i>
-			<label>Logout</label>
-		</a>
+	{{#link-to 'index'  class="item"}}
+			<i class="fi-home"></i>
+			<label>Accueil</label>
+	{{/link-to}}	
+
+	{{#link-to 'description'  class="item"}}
+			<i class="fi-clipboard"></i>
+			<label>R&egrave;gles de jeu</label>
+	{{/link-to}}	
 		
-	{{else}}
-		<a {{action 'authenticate'}} class="item">
-			<i class="fi-torso"></i>
-			<label>Login</label>
-		</a>
-	{{/if}}
+	{{#link-to 'authentif'  class="item"}}
+		{{#if session.isAuthenticated}}
+			<a {{action 'invalidateSession'}} class="item">
+				<i class="fi-power"></i>
+				<label>D&eacute;connexion</label>
+			</a>
+			
+		{{else}}
+			<a  class="item">
+				<i class="fi-torso"></i>
+				<label>Connexion</label>
+			</a>
+		{{/if}}
+	{{/link-to}}
 </div>
+
 {{#if session.isAuthenticated}}
-	<img src={{imgurl}}>Bienvenue {{username}}
+	<img src={{imgurl}}  /> &nbsp; Bienvenue <b>{{username}} </b><br />
+	<h2>Liste des parties</h2>
+	<table>
+	             <tr>
+                          <th>Cr&eacute;ateur</th><th>Mise minimale</th><th>Places restantes</th>
+	             </tr>
+	              <tr>
+                          <td>xxx</td><td>0000</td><td>0000</td>
+	             </tr>
+	</table>
 {{/if}}
 
 {{outlet}}
+
+<footer>
+	<p>Nombre de joueurs : <b>{{nombreJoueurs}}</b></p>
+	<p>Parties en cours :<b>{{nombrePartie}}</b></p>
+</footer>

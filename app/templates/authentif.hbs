@@ -1,0 +1,42 @@
+<style>
+	h2 {
+		font-family : monospace;
+		font-size :  25px;
+	}
+
+    input {
+		 border:2px solid #F5C5C5;
+		 border-radius:20px !important ;
+		 box-shadow:1px 1px 3px #C0C0C0 inset;
+		 cursor : crosshair;
+    }
+ 	p {
+        font-family : verdana;
+    }
+</style>
+<h2>Page d'authentification</h2>
+<p>En peu de temps : inscrivez-vous, connectez-vous et jouez !</p>
+<form  name=""  method=""  action="">
+	<div class="row">
+		<div class="small-12 columns">
+			<label>Nom d'utilisateur<input name="text_name" type="text" autofocus autocomplete="on"  maxlength="20" /></label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<label>Mot de passe<input name="text_pw" type="password" autocomplete="on" maxlength="20"  /></label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-centered small-12 columns">
+			<ul class="text-center button-group round stack-for-small">
+				<li><a class="button">Se connecter &nbsp; <i class="fi-arrow-right"></i>  </a></li>
+				<li>{{#link-to 'register' class='button'}} S'inscrire &nbsp; <i class="fi-pencil"></i>  {{/link-to}}  </li>
+			</ul>
+			<label  class="text-center">ou</label>
+			<ul class="text-center button-group round stack-for-small">
+				<li><a {{action 'authenticate'}} class="button"  >Se connecter via facebook &nbsp; <i class="fi-social-facebook"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</form>

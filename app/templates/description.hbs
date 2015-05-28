@@ -1,0 +1,101 @@
+<article>
+             <h2>Description du jeu</h2>
+             <p>Jeu Poker .....................</p>
+
+             <section> 
+                          <p> - Une partie réunit de 2 à 10 joueurs, connectés simultanément, jouant à tour de rôle dans le sens des aiguilles d'une montre.</p>
+                          <p> - Les joueurs enchaîneront plusieurs coups jusqu'à la fin de la partie. </p>
+                          <ol>- Chaque coup compte <b>4</b> tours :
+                                       <li>Thème</li>
+                                       <li>Sujet</li>
+                                       <li>Indice</li>
+                                       <li>Question</li>
+                          </ol>
+                          <p>- Chaque tour donne lancement à un tour d'enchères, des sommes d'argent mises par les joueurs pour constituer le pot.</p>
+                          <p><b>- Le but du jeu est de remporter les jetons de tous les autres joueurs en fin de partie.</b></p>
+             </section>
+
+             <div  class="section-container accordion" data-section="accordion"> 
+                          <section  class="active">
+                                       <p class="title" data-section-title><a href="">Phase initial</a></p>
+                                       <div  class="content" data-section-content>
+                                                    <p> - Au début de la partie, l'un des joueurs est nommé donneur (dealer) : il possède un jeton D.</p>
+                                                    <p>- Ce jeton passe au joueur à gauche vers la fin de chaque coup, et continuera de faire une rotation horaire.</p>
+                                                    <p>- Les deux joueurs à sa gauche (respectivement dans le sens horaire) doivent chacun s'acquitter d'une mise obligatoire: la petite blinde et la grosse blinde.</p>
+                                                    <p> - La grosse blinde vaut le double de la petite.</p>
+                                                    <p> - Les blindes permettent de s'assurer qu'il y a toujours de l'argent en jeu.</p>
+                                       </div>
+                          </section>
+
+                          <section  class="">   
+                                       <p class="title" data-section-title><a href="">Tour 1</a></p>
+                                        <div  class="content" data-section-content>
+                                       <p>   - Un tirage au sort du thème de la première question est fait. (e.g., Sport)</p>
+                                       <ul> - Le joueur assis à gauche de celui qui a misé la grosse blinde commence le tour d'enchères. Il a le choix de:
+                                                    <li>  - Se coucher (fold): ne plus participer et attendre le coup suivant.</li>
+                                                    <li>  - Suivre (call): miser le même montant que la grosse blinde.</li>
+                                                    <li>  - Relancer (raise): miser un montant supérieur à la grosse blinde</li>
+                                       </ul>
+                                       <p>  - Les joueurs suivants font la même chose.</p>
+                                       <p>  - Pour qu'un joueur reste dans le coup, il doit miser un montant au moins égal à la mise la plus haute dans le tour d'enchères actuel.</p>
+                                       <p>  - Le tour d'enchères se termine une fois que tous les joueurs ont misé le même montant.</p>
+                                       </div>
+                          </section> 
+
+                          <section   class=""> 
+                                       <p class="title" data-section-title><a href="p1">Tour 2</a></p>
+                                        <div  class="content" data-section-content>
+                                       <p>- Tirage au sort du « Sujet » (eg. Football), un nouveau tour d'enchères identique au précèdent commence.</p>
+                                       <ul> - Le joueur à gauche du dealer (celui qui a misé la petite blinde) a la parole. Cette fois il peut soit:
+                                                    <li> - Se coucher (fold): ne plus participer et attendre le coup suivant.</li>
+                                                    <li>  - Relancer (raise): miser un montant supérieur à la grosse blinde</li>
+                                                    <li>  - Checker (check): ne rien miser.</li>
+                                       </ul>
+                                       <p> - Les joueurs suivants font de même.</p>
+                                       <p>  - Les enchères se terminent une fois que tout le monde a checké, ou bien quand tout le monde a misé le même montant.</p>
+                                       <p><mark>NB</mark>: Si un joueur ne peut pas miser à hauteur de l'enchère actuelle, il doit "faire tapis" (en anglais: all-in) : il mise tout ce qu'il possède.</p>
+                                       </div>
+                          </section> 
+
+
+                          <section  class="">  
+                                       <p class="title" data-section-title><a href="">Tour 3</a></p>
+                                        <div  class="content" data-section-content>
+                                       <p> - Tirage au sort de l’indice. (eg. coupe du monde 98 ?)</p>
+                                       <p>  - Un nouveau tour d'enchères identique au précédent a lieu. </p>
+                                       </div>
+                          </section>
+
+                          <section  class=""> 
+                                       <p class="title" data-section-title><a href="">Tour  4</a></p>
+                                        <div  class="content" data-section-content>
+                                       <p>  - Chaque joueur décide de la façon dont il veut répondre (cash, duo (50/50) ou carré (4 propositions de réponses) dasn un laps de temps (5s par ex)</p>
+                                       </div>
+                          </section>
+
+                          <section  class=""> 
+                                       <p class="title" data-section-title><a href="">Tour  5</a></p>
+                                        <div  class="content" data-section-content>
+                                       <p>  - La question est affichée à tous</p>
+                                       <p> -Les réponses doivent être données dans une fenêtre de temps (e. 10s)</p>
+                                       <p> - Tout le monde répond dans cette fenêtre, mais personne n’a une idée sur les réponses des autres</p>
+                                       <p>  - Si le joueur ayant choisi cash a la bonne réponse, il remporte le coup même si les autres ont la bonne réponse avec duo et/ou carré.</p>
+                                       Et si il a faux, celui qui répond correctement à carrée le remporte sur duo même si ce dernier à la bonne réponse.
+                                       </div>
+                          </section>       
+             </div>     
+
+             <section  class="">
+                          <p>  Si les joueurs ayant choisi cash et/ou carré ont une fausse réponse, celui qui a choisi duo avec une bonne réponse remporte le coup</p>
+                          <p>   Si les joueurs ont choisi la même difficulté et ont eu la bonne réponse (dans le temps impartis) ils se partagent le gain.</p>
+                          <p>   Si les joueurs ont choisi la même difficulté et ont eu tous une mauvaise réponse ont doit choisir entre se partager le gain ou mettre l’argent dans le pot.</p>
+                          <p>  - Un nouveau coup commence, le jeton D passe au joueur à gauche…. Et ainsi de suite….</p>
+                          <mark>Exception:</mark> partie avec deux joueurs (head-to-head)
+                          <p>  - Celui qui a le jeton D est celui qui doit miser la petite blinde</p>
+                          <p>  - Tirage au sort de la question. (eg. Quel pays a remporté la coupe du monde 98 ?)</p>
+                          (les jouers peuvent bluffer en misant des grosses sommes, faisant croire aux autres qu'ils ont la réponse les obligeant ainsi à se retirer)
+             </section>
+</article>
+
+
+
