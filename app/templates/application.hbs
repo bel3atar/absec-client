@@ -1,7 +1,4 @@
-<style>
-	.icon-bar{border-bottom: 2px solid black }
-</style>
-
+<link rel="stylesheet" href="assets/css/styles.css">
 
 
 <div class="icon-bar three-up">
@@ -13,38 +10,27 @@
 	{{#link-to 'description'  class="item"}}
 			<i class="fi-clipboard"></i>
 			<label>R&egrave;gles de jeu</label>
-	{{/link-to}}	
-		
-	{{#link-to 'authentif'  class="item"}}
+	{{/link-to}}
+
+	{{#link-to 'liste-partie'  class="item"}}
 		{{#if session.isAuthenticated}}
-			<a {{action 'invalidateSession'}} class="item">
+			
 				<i class="fi-power"></i>
-				<label>D&eacute;connexion</label>
-			</a>
+				<label>Rejoindre partie</label>
+			
 			
 		{{else}}
-			<a  class="item">
+			
 				<i class="fi-torso"></i>
 				<label>Connexion</label>
-			</a>
+			
 		{{/if}}
 	{{/link-to}}
+
 </div>
 
-{{#if session.isAuthenticated}}
-	<img src={{imgurl}}  /> &nbsp; Bienvenue <b>{{username}} </b><br />
-	<h2>Liste des parties</h2>
-	<table>
-	             <tr>
-                          <th>Cr&eacute;ateur</th><th>Mise minimale</th><th>Places restantes</th>
-	             </tr>
-	              <tr>
-                          <td>xxx</td><td>0000</td><td>0000</td>
-	             </tr>
-	</table>
-{{/if}}
-
 {{outlet}}
+<br /><br />
 
 <footer>
 	<p>Nombre de joueurs : <b>{{nombreJoueurs}}</b></p>

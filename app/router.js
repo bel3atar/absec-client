@@ -10,4 +10,5 @@ export default Router.map(function() {
   this.route('register');
   this.route('description');
   this.route('authentif');
+  this.route('liste_partie');
 });
