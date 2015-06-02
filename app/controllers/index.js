@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
 			this.get('session').authenticate(
 				'simple-auth-authenticator:jwt', 
 				{identification: this.get('username'), password: this.get('password')}
-			).catch(err => alert(err)).then(() => this.transitionToRoute('liste_partie'));
+			).catch(err => alert(err));
 
 		},
 

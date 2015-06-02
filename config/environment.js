@@ -2,6 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
+		'simple-auth': {
+			authenticationRoute: 'index',
+			routeAfterAuthentication: 'liste_partie'
+		},
 		'simple-auth-token': {
 			serverTokenEndpoint: 'http://localhost:3000/api/login'
 		},
