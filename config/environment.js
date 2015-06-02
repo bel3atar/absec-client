@@ -12,10 +12,10 @@ module.exports = function(environment) {
 		torii: {
 			providers: {
 				'facebook-connect':{
-					appId: '1446116239034233'
+					appId: '921476387894055'
 				},
 				'facebook-oauth2':{
-					apiKey: '1446116239034233'
+					apiKey: '921476387894055'
 				}
 			}
 		},

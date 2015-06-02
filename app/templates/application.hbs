@@ -3,7 +3,7 @@
 <div class="icon-bar {{if session.isAuthenticated 'three-up' 'two-up'}}">
 	{{#link-to 'index'  class="item"}}
 			<i class="fi-home"></i>
-			<label>Accueil</label>
+			<label>Accueil  &nbsp;&nbsp;&nbsp;&nbsp;</label>
 	{{/link-to}}	
 
 	{{#link-to 'description'  class="item"}}
@@ -25,6 +25,6 @@
 <br /><br />
 
 <footer>
-	<p>Nombre de joueurs : <b>{{nombreJoueurs}}</b></p>
+	<p>Nombre de joueurs : <b>0{{nombreJoueurs}}</b></p>
 	<p>Parties en cours :<b>{{nombrePartie}}</b></p>
 </footer>
