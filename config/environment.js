@@ -2,13 +2,16 @@
 
 module.exports = function(environment) {
   var ENV = {
+		'simple-auth-token': {
+			serverTokenEndpoint: 'http://localhost:3000/api/login'
+		},
 		torii: {
 			providers: {
 				'facebook-connect':{
-					appId: '921476387894055'
+					appId: '1446116239034233'
 				},
 				'facebook-oauth2':{
-					apiKey: '921476387894055'
+					apiKey: '1446116239034233'
 				}
 			}
 		},

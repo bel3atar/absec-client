@@ -1,23 +1,24 @@
 
-<link rel="stylesheet" href="assets/css/styles.css">
 
 <h2>Page d'authentification</h2>
 <p>En peu de temps : inscrivez-vous, connectez-vous et jouez !</p>
 <form  name=""  method=""  action="">
 	<div class="row">
 		<div class="small-12 columns">
-			<label class="nom">Nom d'utilisateur</label><input name="text_name" type="text" autofocus autocomplete="on"  maxlength="20"  required />
+			<label class="nom">Nom d'utilisateur</label>
+				{{input value=username}}
 		</div>
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<label  class="mdp">Mot de passe</label><input name="text_pw" type="password" autocomplete="on" maxlength="20" required />
+			<label  class="mdp">Mot de passe</label>
+				{{input value=password}}
 		</div>
 	</div>
 	<div class="row">
 		<div class="small-centered small-12 columns">
 			<ul class="text-center button-group round stack-for-small">
-				<li><a class="button">Se connecter &nbsp; <i class="fi-arrow-right"></i>  </a></li>
+				<li><a {{action 'login'}} class="button">Se connecter &nbsp; <i class="fi-arrow-right"></i>  </a></li>
 				<li>{{#link-to 'register' class='button'}} S'inscrire &nbsp; <i class="fi-pencil"></i>  {{/link-to}}  </li>
 			</ul>
 			<label  class="text-center">ou</label>

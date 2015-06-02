@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="assets/css/styles.css">
 
 
-<div class="icon-bar three-up">
+<div class="icon-bar {{if session.isAuthenticated 'three-up' 'two-up'}}">
 	{{#link-to 'index'  class="item"}}
 			<i class="fi-home"></i>
 			<label>Accueil</label>
@@ -12,20 +11,13 @@
 			<label>R&egrave;gles de jeu</label>
 	{{/link-to}}
 
-	{{#link-to 'liste-partie'  class="item"}}
 		{{#if session.isAuthenticated}}
-			
+		<a class=item {{action 'invalidateSession'}}>
 				<i class="fi-power"></i>
-				<label>Rejoindre partie</label>
-			
-			
-		{{else}}
-			
-				<i class="fi-torso"></i>
-				<label>Connexion</label>
+				<label>Se déconnecter</label>
+		</a>	
 			
 		{{/if}}
-	{{/link-to}}
 
 </div>
 
