@@ -1,10 +1,17 @@
 
 
 <div class="icon-bar {{if session.isAuthenticated 'three-up' 'two-up'}}">
-	{{#link-to 'index'  class="item"}}
-			<i class="fi-home"></i>
-			<label>Accueil</label>
-	{{/link-to}}	
+		{{#if session.isAuthenticated}}
+			{{#link-to 'liste_partie'  class="item"}}
+					<i class="fi-home"></i>
+					<label>Accueil</label>
+			{{/link-to}}	
+		{{else}}
+			{{#link-to 'index'  class="item"}}
+					<i class="fi-home"></i>
+					<label>Accueil</label>
+			{{/link-to}}	
+		{{/if}}
 
 	{{#link-to 'description'  class="item"}}
 			<i class="fi-clipboard"></i>
