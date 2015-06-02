@@ -1,0 +1,25 @@
+<form>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<label>Mise minimale {{input type='number' min='5' value=blind}}</label>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<label><span id=sliderOutput></span> joueurs
+				{{range-slider start=2 end=10 value=nplayers}}
+			</label>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="large-12 columns">
+			<button {{action 'newgame'}}>Créer</button>
+		</div>
+	</div>
+	
+
+</form>

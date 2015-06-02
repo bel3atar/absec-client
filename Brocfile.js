@@ -3,7 +3,11 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var Funnel = require('broccoli-funnel');
 
-var app = new EmberApp();
+var app = new EmberApp({
+	'ember-cli-foundation-sass': {
+		foundationJs: [ 'slider' ]
+	}
+});
 app.import('bower_components/foundation-icon-fonts/foundation-icons.woff', {
 	destDir: 'assets'
 });
