@@ -5,7 +5,10 @@ export default Ember.Component.extend({
 		this.$().foundation({
 				slider: {
 					on_change: () => {
-						this.set('value', Ember.$('[data-slider]').attr('data-slider'));
+						this.set(
+							'value', 
+							Ember.$(`#${this.get('id')}[data-slider]`).attr('data-slider')
+						);
 					}
 				}
 		});
