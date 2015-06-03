@@ -1,23 +1,28 @@
 h2 {
-     font-family : georgia,Arial,sans-serif;
-    font-size :  25px;
-    color :  #555;
-    margin-left :25px;
-    text-shadow : 2px 2px 1px white;
+     font-family : Arial,sans-serif  !important;
+    font-size :  23px  !important;
+    color :  #555  !important;
+    margin-left :25px  !important;
+    text-shadow : 2px 2px 1px white  !important;
 
 }
 
 h3 {
     font-family : arial  !important ;
     font-size :  14px   !important  ;
-      font-weight :500  !important;
+    font-weight :500  !important;
+    margin-left :25px  !important;
+    border-bottom: 1px solid #FFA500;
+    width :85%;
 }
 
-p {
-    font-family : Arial,Helvetica,sans-serif;
-    font-size: 15px;
-    font-weight :500;
-    margin-left :25px;
+
+
+p, ol, ul, li {
+    font-family : Arial,Helvetica,sans-serif  !important;
+    font-size: 15px  !important;
+    font-weight :500  !important;
+    margin-left :25px  !important;
 }
 
 input {
@@ -28,25 +33,26 @@ input {
 }
 
 input:hover{
-  border-bottom:1px solid blue !important ;
-  border-left:1px solid blue !important ;}
+  border-bottom:1px solid #2C75FF !important ;
+  border-left:1px solid #2C75FF !important ;}
 
 body{background-color: #E8E8E8 }
 
 .icon-bar{border-bottom: 2px solid #FFA500}
 
-footer p { font: 12px "Noto Sans","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;}
+footer p { 
+  font: 12px "Noto Sans","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;
+}
+footer b {color : #FFA500;}
 
 .icon-bar label {   
-		 font-family: "Oxygen",sans-serif;
-     font-weight: 500;
+		 font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif  !important;
+     font-weight: 500 !important;
      font-size: 16px  !important;
 }
 
 .icon-bar label:hover{ 
 		color : orange !important;
-   ;
-	
 }
 
 .nom {margin-left : 10px;}
@@ -54,3 +60,24 @@ footer p { font: 12px "Noto Sans","Lucida Grande","Lucida Sans Unicode",Geneva,V
 .mdp {margin-left : 10px;}
 
 .text-center {color : #FFA500;  opacity:0.7;}
+
+hr {
+margin-left :25px  !important;
+
+}
+
+.profil {
+ margin-left :25px  !important;
+
+}
+table {
+margin-left :25px  !important;
+
+}
+
+th{
+  color : grey  !important;
+}
+mark {
+  margin-left :25px  !important;
+}
