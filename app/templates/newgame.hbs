@@ -1,6 +1,8 @@
+<span class="profil"><img src={{imgurl}}  /> &nbsp; Bienvenue <b>{{username}} </b><br /></span>
 <form>
-
-	<div class="row">
+    <h2>Cr&eacute;er une partie</h2>
+    <p>Choisissez la mise minimale, de 2 à 10  joueurs <!--(par la position du curseur) -->et cr&eacute;er votre partie !</p>
+	<div class="row"> 
 		<div class="large-12 columns">
 			<label>Mise minimale {{input type='number' min='5' value=blind}}</label>
 		</div>
@@ -17,7 +19,7 @@
 
 	<div class="row">
 		<div class="large-12 columns">
-			<button {{action 'newgame'}}>Créer</button>
+			<button {{action 'newgame'}} >Créer &nbsp;<i class="fi-die-three"></i> </button>
 		</div>
 	</div>
 	
