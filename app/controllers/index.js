@@ -5,10 +5,22 @@ export default Ember.Controller.extend({
 	actions: {
 
 		login: function () {
-			this.get('session').authenticate(
-				'simple-auth-authenticator:jwt', 
-				{identification: this.get('username'), password: this.get('password')}
-			).catch(err => alert(err));
+			this.get('session')
+				.authenticate(
+					'simple-auth-authenticator:jwt', {
+						identification: this.get('username'),
+						password: this.get('password')
+					})
+				.catch(err => alert(err))
+				.then(() => {
+					var sess = this.container
+					.lookup("simple-auth-authenticator:jwt")
+					.getTokenData(this.get('session.secure').token);
+					this.store.createRecord('user', {
+						id: sess.uid,
+						username: sess.username
+					});
+				});
 
 		},
 
@@ -24,9 +36,8 @@ export default Ember.Controller.extend({
 							fields: 'name,picture'
 					}, 
 					data => {
-						this.set('imgurl', data.picture.data.url);
-						this.set('username', data.name);
-						window.localStorage.setItem('session', JSON.stringify(data));
+						this.set('session.imgurl', data.picture.data.url);
+						this.set('session.username', data.name);
 					}
 				);
 			});

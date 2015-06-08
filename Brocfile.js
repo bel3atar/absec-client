@@ -12,6 +12,7 @@ app.import('bower_components/foundation-icon-fonts/foundation-icons.woff', {
 	destDir: 'assets'
 });
 app.import('app/styles/app.css');
+app.import('bower_components/sio-client/socket.io.js');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

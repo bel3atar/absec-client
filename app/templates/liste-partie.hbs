@@ -1,13 +1,16 @@
-
 <span class="profil"><img src={{imgurl}}  /> &nbsp; Bienvenue <b>{{username}} </b><br /></span>
 <h2>Rejoindre une partie</h2>
 <p>Vous pouvez rejoindre plusieurs parties, en cliquant sur une ligne au dessous : </p>
 <table border="0" align="center"  width=""   height=""   > 
 	<tr>
-		<th>Cr&eacute;ateur</th><th>Mise minimale</th><th>Places restantes</th>
+		<th>Créateur</th><th>Mise minimale</th><th>Places restantes</th>
 	</tr>
-	<tr>
-		<td>xxx</td><td>0000</td><td>0000</td>
-	</tr>
+	{{#each game in model}}
+		<tr>
+			<td>{{game.owner.username}}</td>
+			<td>{{game.blind}}</td>
+			<td>{{game.nplayers}}</td>
+		</tr>
+	{{/each}}
 </table>
 {{#link-to 'newgame'}}<span  class="[secondary][radius] label ">Créez votre partie !</span>{{/link-to}}

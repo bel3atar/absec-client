@@ -1,7 +1,7 @@
 {
   "name": "client",
   "dependencies": {
-    "ember": "1.11.1",
+    "ember": "1.12.1",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
     "ember-cli-test-loader": "ember-cli-test-loader#0.1.3",
     "ember-data": "1.0.0-beta.16.1",
@@ -14,6 +14,7 @@
     "qunit": "~1.17.1",
     "foundation": "~5.5.0",
     "foundation-icon-fonts": "*",
-    "ember-simple-auth": "0.8.0-beta.2"
+    "ember-simple-auth": "0.8.0-beta.3",
+    "sio-client": "~1.3.6"
   }
 }
