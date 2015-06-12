@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
 
 	actions: {
 
+		/* CREDENTIALS */
 		login: function () {
 			this.get('session')
 				.authenticate(
@@ -14,8 +15,9 @@ export default Ember.Controller.extend({
 				.catch(err => alert(err))
 				.then(() => {
 					var sess = this.container
-					.lookup("simple-auth-authenticator:jwt")
-					.getTokenData(this.get('session.secure').token);
+						.lookup("simple-auth-authenticator:jwt")
+						.getTokenData(this.get('session.secure').token);
+					this.set('session.uid', sess.uid);
 					this.store.createRecord('user', {
 						id: sess.uid,
 						username: sess.username
@@ -23,7 +25,7 @@ export default Ember.Controller.extend({
 				});
 
 		},
-
+		/* FACEBOOK */
 		authenticate: function() {
 			this.get('session').authenticate(
 				'simple-auth-authenticator:torii', 'facebook-connect'
@@ -33,11 +35,17 @@ export default Ember.Controller.extend({
 					'https://graph.facebook.com/me', 
 					{
 							access_token: this.get('session.content.secure.accessToken'),
-							fields: 'name,picture'
+							fields: 'name,id'
 					}, 
 					data => {
-						this.set('session.imgurl', data.picture.data.url);
-						this.set('session.username', data.name);
+						var user = this.store.createRecord('user', {
+							username: data.name,
+							fbid: data.id
+						});
+						user.save().then(() => {;
+							this.set('session.username', data.name);
+							this.set('session.uid', user.get('id'));
+						});
 					}
 				);
 			});

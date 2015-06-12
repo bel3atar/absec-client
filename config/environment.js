@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
 		'simple-auth': {
+			authorizer: 'simple-auth-authorizer:token',
 			authenticationRoute: 'index',
 			routeAfterAuthentication: 'liste_partie',
 			routeIfAlreadyAuthenticated: 'liste_partie',

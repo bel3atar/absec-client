@@ -1,8 +1,10 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend({
+var r = Ember.Route.extend(AuthenticatedRouteMixin);
+r.reopen({
 	model: function () {
-		this.store.unloadAll('game');
 		return this.store.find('game');
 	}
 });
+export default r;
