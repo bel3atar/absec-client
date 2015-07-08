@@ -7,8 +7,13 @@ export default Ember.Controller.extend({
 			this.store.find('user', uid).then(user => {
 				var game = this.getProperties('blind', 'nplayers');
 				game.owner = user;
-				this.store.createRecord('game', game).save().then(() => {
-						this.transitionToRoute('liste_partie');
+				game = this.store.createRecord('game', game);
+				game.save().then((saved) => {
+					console.log(`game save with nplayers = `, saved.get('nplayers'));
+					saved.set('remaining', saved.get('nplayers') - 1);
+					console.log(`game save with remaining = `, saved.get('remaining'));
+					this.set('game', saved);
+					this.transitionToRoute('waiting');
 				});
 			});
 		}

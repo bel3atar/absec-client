@@ -42,7 +42,7 @@ export default Ember.Controller.extend({
 							username: data.name,
 							fbid: data.id
 						});
-						user.save().then(() => {;
+						user.save().then(() => {
 							this.set('session.username', data.name);
 							this.set('session.uid', user.get('id'));
 						});

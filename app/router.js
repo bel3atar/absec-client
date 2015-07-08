@@ -14,4 +14,5 @@ export default Router.map(function() {
   this.route('games.new');
   this.route('newgame');
   this.route('partie');
+  this.route('waiting');
 });
