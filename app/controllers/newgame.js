@@ -6,8 +6,9 @@ export default Ember.Controller.extend({
 			var uid = this.get('session.uid');
 			this.store.find('user', uid).then(user => {
 				var game = this.getProperties('blind', 'nplayers');
-				game.owner = user;
 				game = this.store.createRecord('game', game);
+				game.set('owner', user);
+				game.get('players').pushObject(user);
 				game.save().then((saved) => {
 					this.transitionToRoute('waiting');
 				});
