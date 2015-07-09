@@ -9,10 +9,6 @@ export default Ember.Controller.extend({
 				game.owner = user;
 				game = this.store.createRecord('game', game);
 				game.save().then((saved) => {
-					console.log(`game save with nplayers = `, saved.get('nplayers'));
-					saved.set('remaining', saved.get('nplayers') - 1);
-					console.log(`game save with remaining = `, saved.get('remaining'));
-					this.set('game', saved);
 					this.transitionToRoute('waiting');
 				});
 			});
