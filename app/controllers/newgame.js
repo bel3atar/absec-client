@@ -9,9 +9,7 @@ export default Ember.Controller.extend({
 				game = this.store.createRecord('game', game);
 				game.set('owner', user);
 				game.get('players').pushObject(user);
-				game.save().then((saved) => {
-					this.transitionToRoute('waiting');
-				});
+				game.save().then(() => this.transitionToRoute('waiting'));
 			});
 		}
 	}
