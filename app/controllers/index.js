@@ -18,10 +18,7 @@ export default Ember.Controller.extend({
 						.lookup("simple-auth-authenticator:jwt")
 						.getTokenData(this.get('session.secure').token);
 					this.set('session.uid', sess.uid);
-					this.store.createRecord('user', {
-						id: sess.uid,
-						username: sess.username
-					});
+					this.store.find('user', sess.uid);
 				});
 
 		},
